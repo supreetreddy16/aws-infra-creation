@@ -1,0 +1,11 @@
+service: infracreation-01
+frameworkVersion: '3'
+configValidationMode: error
+provider:
+  name: aws
+  deploymentMethod: direct
+  region: us-east-2
+  deploymentPrefix: infracreation-01
+
+resources:
+  - ${file(./resources/s3buckets.yml)}
